@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 20% 98%;
+    --foreground: 150 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 30% 10%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 145 30% 92%;
+    --secondary-foreground: 150 30% 15%;
+
+    --muted: 140 20% 95%;
+    --muted-foreground: 150 10% 45%;
+
+    --accent: 142 50% 88%;
+    --accent-foreground: 150 30% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 15% 88%;
+    --input: 140 15% 88%;
+    --ring: 142 71% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 145 25% 96%;
+    --sidebar-foreground: 150 20% 25%;
+    --sidebar-primary: 142 71% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 142 30% 90%;
+    --sidebar-accent-foreground: 150 30% 15%;
+    --sidebar-border: 140 15% 88%;
+    --sidebar-ring: 142 71% 45%;
+
+    --success: 142 71% 45%;
+    --warning: 38 92% 50%;
+    --info: 210 100% 52%;
+    --vehicle-electric: 194 55% 76%;
+    --vehicle-classic: 131 58% 77%;
+    --vehicle-scooter: 245 57% 76%;
+  }
+
+  .dark {
+    --background: 150 20% 5%;
+    --foreground: 140 15% 92%;
+
+    --card: 150 20% 8%;
+    --card-foreground: 140 15% 92%;
+
+    --popover: 150 20% 8%;
+    --popover-foreground: 140 15% 92%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 150 15% 15%;
+    --secondary-foreground: 140 15% 92%;
+
+    --muted: 150 15% 15%;
+    --muted-foreground: 140 10% 60%;
+
+    --accent: 150 20% 18%;
+    --accent-foreground: 140 15% 92%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 18%;
+    --input: 150 15% 18%;
+    --ring: 142 71% 45%;
+
+    --sidebar-background: 150 20% 7%;
+    --sidebar-foreground: 140 15% 85%;
+    --sidebar-primary: 142 71% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 20% 12%;
+    --sidebar-accent-foreground: 140 15% 92%;
+    --sidebar-border: 150 15% 18%;
+    --sidebar-ring: 142 71% 45%;
+    --vehicle-electric: 194 55% 76%;
+    --vehicle-classic: 131 58% 77%;
+    --vehicle-scooter: 245 57% 76%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/80 backdrop-blur-md border border-border/50;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-400;
+  }
+}
